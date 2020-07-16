@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+
+   <extension
+         point="org.eclipse.ui.commands">
+      <category
+            id="TestCorrectness.commands.category"
+            name="Sample Category">
+      </category>
+      <command
+            categoryId="TestCorrectness.commands.category"
+            name="Specified Assertion"
+            id="TestCorrectness.commands.sampleCommand">
+      </command>
+   </extension>
+   <extension
+         point="org.eclipse.ui.handlers">
+      <handler
+            class="testcorrectness.handlers.TestCorrectnessHandler"
+            commandId="TestCorrectness.commands.sampleCommand">
+      </handler>
+   </extension>
+   <extension
+         point="org.eclipse.ui.bindings">
+      <key
+            commandId="TestCorrectness.commands.sampleCommand"
+            schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"
+            contextId="org.eclipse.ui.contexts.window"
+            sequence="M1+6">
+      </key>
+   </extension>
+   <extension
+         point="org.eclipse.ui.menus">
+      <menuContribution
+            locationURI="menu:org.eclipse.ui.main.menu?after=additions">
+         <menu
+               id="TestCorrectness.menus.sampleMenu"
+               label="Test Correctness"
+               mnemonic="M">
+            <command
+                  commandId="TestCorrectness.commands.sampleCommand"
+                  id="TestCorrectness.menus.sampleCommand"
+                  mnemonic="S">
+            </command>
+         </menu>
+      </menuContribution>
+      <menuContribution
+            locationURI="toolbar:org.eclipse.ui.main.toolbar?after=additions">
+         <toolbar
+               id="TestCorrectness.toolbars.sampleToolbar">
+            <command
+                  id="TestCorrectness.toolbars.sampleCommand"
+                  commandId="TestCorrectness.commands.sampleCommand"
+                  icon="icons/sample.png"
+                  tooltip="Welcome">
+            </command>
+         </toolbar>
+      </menuContribution>
+   </extension>
+
+</plugin>

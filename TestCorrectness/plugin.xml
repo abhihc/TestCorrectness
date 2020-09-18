@@ -45,18 +45,6 @@
             </command>
          </menu>
       </menuContribution>
-      <menuContribution
-            locationURI="toolbar:org.eclipse.ui.main.toolbar?after=additions">
-         <toolbar
-               id="TestCorrectness.toolbars.sampleToolbar">
-            <command
-                  id="TestCorrectness.toolbars.sampleCommand"
-                  commandId="TestCorrectness.commands.sampleCommand"
-                  icon="icons/sample.png"
-                  tooltip="Welcome">
-            </command>
-         </toolbar>
-      </menuContribution>
    </extension>
 
 </plugin>
